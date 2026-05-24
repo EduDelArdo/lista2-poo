@@ -8,12 +8,12 @@ class Notificador(ABC):
 
 class NotificadorEmail(Notificador):
     def notificar(self, mensagem: str) -> str:
-        return f"📧 [E-MAIL] Enviando mensagem corporativa: '{mensagem}'"
+        return f"[E-MAIL] Enviando mensagem corporativa: '{mensagem}'"
 
 
 class NotificadorSMS(Notificador):
     def notificar(self, mensagem: str) -> str:
-        return f"💬 [SMS] Disparando torpedo para celular: '{mensagem}'"
+        return f"[SMS] Disparando torpedo para celular: '{mensagem}'"
 
 
 class NotificadorApp(Notificador):
