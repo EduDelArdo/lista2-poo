@@ -4,4 +4,4 @@ class Boleto:
         self.valor = valor
 
     def imprimir(self) -> str:
-        return f"🧾 [BOLETO] Código: {self.codigo} | Valor: R$ {self.valor:.2f}"
+        return f"[BOLETO] Código: {self.codigo} | Valor: R$ {self.valor:.2f}"
