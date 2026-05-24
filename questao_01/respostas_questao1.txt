@@ -34,6 +34,6 @@ class ArtigoEscrito(Midia):
         self.num_paginas = num_paginas
 
     def reproduzir(self) -> str:
-        return f"📖 Exibindo o artigo '{self.titulo}' com {self.num_paginas} páginas para leitura..."
+        return f"Exibindo o artigo '{self.titulo}' com {self.num_paginas} páginas para leitura..."
 
 O mais fantástico é que a classe PlataformaRepository e a TerminalUI NÃO precisariam sofrer nenhuma alteração para aceitar e rodar esse novo tipo de mídia.
