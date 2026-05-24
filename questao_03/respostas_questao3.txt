@@ -1,0 +1,25 @@
+================================================================================
+           QUESTÃO 3: PERGUNTAS TEÓRICAS (SISTEMA DE NOTIFICAÇÕES)
+================================================================================
+
+● Qual classe representa o contrato formal?
+--------------------------------------------------------------------------------
+Resposta: A classe abstrata "Notificador". É ela que define a regra de negócio e a assinatura obrigatória que todos os canais de envio concretos do sistema são forçados a seguir.
+
+
+● Onde há polimorfismo?
+--------------------------------------------------------------------------------
+Resposta: O polimorfismo ocorre dentro da classe "CentralNotificacoes", mais especificamente no laço 'for' do método 'enviar_para_todos'. O sistema trata 
+todos os objetos ali dentro de forma genérica como sendo do tipo "Notificador", 
+mas, em tempo de execução, o Python descobre o tipo real de cada subclasse e dispara a implementação específica de cada uma.
+
+
+● Por que faz sentido usar ABC nesse caso?
+--------------------------------------------------------------------------------
+Resposta: Faz sentido porque "Notificação" é um conceito puramente abstrato. 
+No mundo real, tu não envias uma notificação "genérica", tu envias sempre um e-mail, um SMS ou um alerta push de aplicação. Usar ABC impede que a classe base seja instanciada por engano e garante a segurança do código, obrigando qualquer novo canal criado no futuro a implementar o método padrão.
+
+
+● O que aconteceria se uma subclasse de Notificador não implementasse notificar()?
+--------------------------------------------------------------------------------
+Resposta: Se uma subclasse não implementar o método abstrato 'notificar()', o Python passará a considerá-la como uma classe abstrata também. Como consequência, o interpretador vai gerar um erro de tipo se tentares criar um objeto dessa subclasse no arquivo 'main.py', bloqueando a execução do programa até que o contrato seja cumprido.

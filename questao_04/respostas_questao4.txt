@@ -1,0 +1,25 @@
+================================================================================
+          QUESTÃO 4: PERGUNTAS TEÓRICAS (SISTEMA DE IMPRESSÃO)
+================================================================================
+
+1. Onde está o contrato nesse caso?
+--------------------------------------------------------------------------------
+Resposta: O contrato está definido estruturalmente dentro da classe baseada em Protocol ('Imprimivel'). Ele estabelece que qualquer objeto que queira ser impresso precisa obrigatoriamente fornecer uma assinatura de método chamada 'imprimir()'.
+
+
+2. Por que as classes podem funcionar sem herdar explicitamente do protocolo?
+--------------------------------------------------------------------------------
+Resposta: Porque o Python implementa a tipagem estrutural estática através do PEP 544. 
+Diferente das Classes Abstratas (ABC), o Protocol não exige herança nominal (subclassing). 
+O interpretador realiza uma verificação baseada apenas na forma e comportamento do objeto.
+
+
+3. Esse caso se aproxima mais de ABC ou de duck typing?
+--------------------------------------------------------------------------------
+Resposta: Aproxima-se completamente de Duck Typing ("Se caminha como um pato e voa como um pato, então é um pato"). O Protocol é a formalização do Duck Typing para checadores de tipo em Python.
+
+
+4. Qual a principal diferença entre esse caso e o da Questão 1?
+--------------------------------------------------------------------------------
+Resposta: Na Questão 1, usamos Herança Nominal com ABC, forçando um acoplamento direto na árvore genealógica (as subclasses precisavam herdar explicitamente de Midia). 
+Aqui na Questão 4, usamos Tipagem Estrutural, permitindo que classes totalmente distintas e sem nenhuma relação de parentesco sejam tratadas de forma polimórfica pela função de impressão.

@@ -1,0 +1,25 @@
+================================================================================
+          QUESTÃO 2: RESPOSTAS DAS PERGUNTAS DE FIXAÇÃO (SLIDE 14)
+================================================================================
+
+1. Qual é a superclasse da hierarquia?
+--------------------------------------------------------------------------------
+Resposta: A superclasse é a classe abstrata "Funcionario". Ela serve como base, definindo os atributos em comum e ditando a regra obrigatória de assinatura para o método de cálculo de salários através do contrato de ABC.
+
+2. Quais são as subclasses?
+--------------------------------------------------------------------------------
+Resposta: As subclasses que herdam da superclasse são: FuncionarioAssalariado, FuncionarioHorista e FuncionarioComissionado.
+
+3. Onde ocorre sobrescrita?
+--------------------------------------------------------------------------------
+Resposta: A sobrescrita de método ocorre dentro das três subclasses concretas. Cada uma delas redefine e fornece uma implementação real para o método abstrato "calcular_pagamento()", que havia sido declarado vazio na classe pai.
+
+4. Onde ocorre polimorfismo?
+--------------------------------------------------------------------------------
+Resposta: O polimorfismo ocorre dentro do arquivo "empresa_ui.py", especificamente na linha onde o relatório financeiro executa: "pagamento = f.calcular_pagamento()".
+Embora o sistema trate o objeto de forma genérica como um "Funcionario", em tempo de execução o Python identifica o tipo específico da subclasse e chama o método de cálculo correto de cada um.
+
+5. Qual a vantagem de usar ABC nesse caso?
+--------------------------------------------------------------------------------
+Resposta: A vantagem é garantir a segurança do sistema. Usando ABC, impedimos que um funcionário "genérico" seja criado por engano no código.
+Além disso, força qualquer nova categoria de funcionário que venha a ser criada no futuro a implementar obrigatoriamente a sua própria regra de pagamento, evitando falhas ocultas no sistema.

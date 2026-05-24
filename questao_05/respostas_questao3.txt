@@ -1,0 +1,14 @@
+================================================================================
+          QUESTÃO 3: EXPLICAÇÃO DO COMPORTAMENTO (ABC vs PROTOCOL)
+================================================================================
+
+1. Qual a diferença prática entre o Armazenador (ABC) e o Salvavel (Protocol)?
+--------------------------------------------------------------------------------
+Resposta: A classe abstrata Armazenador exige "Herança Nominal". Isso significa que uma classe só é aceita se ela herdar de forma explícita na árvore genealógica (ex: class Sub(Armazenador)).
+Já o protocolo Salvavel utiliza "Tipagem Estrutural" (conhecido como Duck Typing). 
+O sistema não chega quem o objeto é, mas sim o que ele faz. Se a classe possuir o método "salvar(dado)", ela se torna compatível de forma automática, mesmo sem herdar de nenhuma outra classe.
+
+2. O que aconteceria se tentássemos passar o ArmazenadorNuvem na função formal?
+--------------------------------------------------------------------------------
+Resposta: Se estivéssemos utilizando ferramentas de checagem estática de tipos ou funções de validação explícita (como isinstance), o sistema acusaria um erro de tipo. Isso ocorreria porque o ArmazenadorNuvem 
+não herda de Armazenador. Na execução pura e dinâmica do Python o método chegaria a rodar devido à maleabilidade da linguagem, mas quebraria o contrato conceitual de herança formal proposto pelo método.
